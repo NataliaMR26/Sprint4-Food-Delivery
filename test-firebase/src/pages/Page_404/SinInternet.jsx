@@ -9,6 +9,9 @@ function SinInternet() {
 
         1 PAGINA
       </h1>
+      <Link to="/slides">
+        <button>Ir a Slides</button>
+      </Link>
     </div>
   )
 }

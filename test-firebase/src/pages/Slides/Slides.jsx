@@ -8,6 +8,10 @@ function Slides() {
       Pagina donde se mapean los slides del inicio
 
       3 SLIDES
+      
+      <Link to="/validation">
+        <button>Ir a validation</button>
+      </Link>
     </h1>
 
     </div>

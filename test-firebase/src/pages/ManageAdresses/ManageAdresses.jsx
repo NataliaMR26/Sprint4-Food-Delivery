@@ -1,16 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-function FAQ() {
+function ManageAdresses() {
   return (
     <div>
-      <h1>
-        FAQ page se accede desde support.
-      
-        1 SOLA PAGINA QUE SALE DEL PROFILE
-      </h1>
-      <Link to="/slides">
-        <button>Ir a Slides</button>
+      Manejo de ubicacion por calle y ubicacion
+
+      <Link to="/location">
+        <button>Ir a location</button>
       </Link>
       <div>
             <Link to="/home">
@@ -30,4 +27,4 @@ function FAQ() {
   )
 }
 
-export default FAQ
+export default ManageAdresses

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function Validation() {
   return (
@@ -10,6 +11,9 @@ function Validation() {
 
        4 PAGINAS
        </h1>
+       <Link to="/location">
+        <button>Ir a Location</button>
+      </Link>
 
     </div>
   )

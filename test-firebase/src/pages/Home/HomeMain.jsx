@@ -1,14 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-function Order() {
+function Home() {
   return (
     <div>
       <h1>
-        Aca esta order, current order y order is accepted
+       Home se llega desde location
       
-      5 PAGINAS
+       2 PAGINAS INCLUYENDO EL MANAGE ADDRESS
       </h1>
+      
+      <Link to="/ManageAdresses">
+        <button>Ir a Manage Adresses</button>
+      </Link>
+
       <Link to="/home">
         <button>Ir a home</button>
       </Link>
@@ -21,8 +26,9 @@ function Order() {
       <Link to="/Profile">
         <button>Ir a Profile</button>
       </Link>
+
     </div>
   )
 }
 
-export default Order
+export default Home
