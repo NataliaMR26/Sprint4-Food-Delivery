@@ -10,7 +10,6 @@ function Validation() {
 
        4 PAGINAS
        </h1>
-       <Link></Link>
 
     </div>
   )

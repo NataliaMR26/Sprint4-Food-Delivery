@@ -8,7 +8,6 @@ function Profile() {
 
         2 PAGINAS
         </h1>
-        <Link></Link>
 
     </div>
   )

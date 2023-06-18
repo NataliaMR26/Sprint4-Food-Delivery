@@ -8,7 +8,6 @@ function Support() {
       
       1 PAGINA
       </h1>
-      <Link></Link>
 
     </div>
   )

@@ -8,7 +8,6 @@ function Payment() {
       
       1 SOLA PAGINA
       </h1>
-      <Link></Link>
     </div>
   )
 }

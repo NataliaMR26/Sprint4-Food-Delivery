@@ -8,7 +8,6 @@ function Search() {
 
         2 PAGINAS
         </h1>
-        <Link></Link>
     </div>
   )
 }

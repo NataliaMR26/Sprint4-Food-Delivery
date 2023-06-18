@@ -8,7 +8,6 @@ function Slides() {
 
       3 SLIDES
     </h1>
-    <Link></Link>
 
     </div>
   )
