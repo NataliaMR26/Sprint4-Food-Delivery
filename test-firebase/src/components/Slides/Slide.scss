@@ -1,0 +1,26 @@
+.slide-container {
+  text-align: center;
+
+  img {
+      width: 100%;
+      height: auto;
+  }
+
+  .dots {
+      display: flex;
+      justify-content: center;
+      margin: 1em 0;
+
+      .dot {
+          width: 10px;
+          height: 10px;
+          margin: 0 5px;
+          border-radius: 50%;
+          background-color: #ccc;
+
+          &.active {
+              transform: scale(1.5);
+          }
+      }
+  }
+}

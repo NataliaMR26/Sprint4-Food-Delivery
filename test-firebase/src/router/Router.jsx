@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Validation from "../pages/Validation/Validation";
 import Start from "../pages/Start/Start";
-import Slides from "../pages/Slides/Slides";
+import SlidesPage from "../pages/Slides/SlidesPage";
 import Location from "../pages/Location/Location";
 import Home from "../pages/Home/HomeMain";
 import ManageAdresses from "../pages/ManageAdresses/ManageAdresses";
@@ -27,7 +27,7 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
           <Route path="/" element={<Start />} />
-          <Route path="/slides" element={<Slides />} />
+          <Route path="/slides" element={<SlidesPage />} />
           <Route path="/validation" element={<Validation />} />
           <Route
             path="/Location"
