@@ -1,15 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../images/logoSignIn.png';
+import '../../components/Start/start.scss'
 
 function Start() {
   return (
-    <div>
-      <h1>Pagina de inicio donde inicia todo
-
-        1 PESTANA
-      </h1>
+    <div className="body">
       <Link to="/slides">
-        <button>Ir a Slides</button>
+        <button><img src={logo} alt="logo" /></button>
       </Link>
     </div>
   );

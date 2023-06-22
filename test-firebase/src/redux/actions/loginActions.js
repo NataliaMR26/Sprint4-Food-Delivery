@@ -10,6 +10,7 @@ export const loginUserAsync = ( {email, password} ) =>{
             const {user} = await signInWithEmailAndPassword(auth, email, password)
             const userCollection = await getFilterItemsActionAsync("users",['uid', '==', user.uid]);
             const currentUser= {...userCollection[0]}
+            console.log(currentUser)
             const error = { status: false, message: ''}
             dispatch(loginUser(currentUser, error));
             dispatch(toggleLogin())
@@ -137,32 +138,7 @@ const userLogout = () => {
     };
 };
 
-export const verifyCodeAsync = (code) => {
-    return async (dispatch) => {
-        dispatch(toggleLoading())
-        window.confirmationResult
-        .confirm(code)
-        .then( async (result) => {
-            const userData = result.user.auth.currentUser;
-            const userCollection = await getFilterItemsActionAsync("users",['uid', '==', userData.uid]);
-            const user= {...userCollection[0]}
-            const error = { status: false, message: ''}
-            dispatch(loginUser(user, error));
-            dispatch(toggleLogin())
-            dispatch(toggleLoading())
-        })
-        .catch((err) => {
-            console.log(err);
-            dispatch(
-                loginUser({
-                user: {},
-                error: { status: true, message: 'Error al crear nuevo usuario'},
-                })
-            );
-            dispatch(toggleLoading())
-        });
-    };
-};
+
 
 export const updateProfileAsync = (userInfo) => {
     return async (dispatch) => {

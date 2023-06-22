@@ -1,28 +1,26 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import '../../components/address/ManageAdresses.scss'
 
 function ManageAdresses() {
   return (
-    <div>
-      Manejo de ubicacion por calle y ubicacion
-
+    <div className='body-address'>
+      <h1>Manage Adresses</h1>
+      <input
+        type='text'
+        placeholder='Address 1'
+      />
+       <input
+        type='text'
+        placeholder='Address 2'
+      />
+       <input
+        type='text'
+        placeholder='Address 3'
+      />
       <Link to="/location">
-        <button>Ir a location</button>
+        <button>Specify on the map</button>
       </Link>
-      <div>
-            <Link to="/home">
-            <button>Ir a home</button>
-            </Link>
-            <Link to="/search">
-              <button>Ir a Search</button>
-            </Link>
-            <Link to="/Order">
-              <button>Ir a Order</button>
-            </Link>
-            <Link to="/Profile">
-              <button>Ir a Profile</button>
-            </Link>
-        </div>
     </div>
   )
 }

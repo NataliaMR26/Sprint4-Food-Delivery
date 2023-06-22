@@ -8,6 +8,7 @@ const initialState = {
         phoneNumer: '',
         photo: '',
         cellphone:'',
+        id:'',
         cards:[]
     },
     error: {

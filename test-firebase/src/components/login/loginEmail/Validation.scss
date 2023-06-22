@@ -1,0 +1,80 @@
+.login-page{
+    background-color: #FEFDFB;
+    text-align: center;
+    color: #414141;
+    padding: 0 16px;
+    figure{
+        display: flex;
+        justify-content: center;
+    }
+    .title{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 23px;
+    }
+    .description{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+    form{
+        text-align: initial;
+        input{
+            box-sizing:border-box;
+            outline: none;
+            border-bottom: 1px solid #FFE031;
+            height: 28px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            width: 100%;
+            padding-left: 35px;
+            color: #A7A7A7;
+            margin-bottom: 20px;
+        }
+        .error{
+            color: red;
+            font-size: 13px;
+            padding: 0 10px;
+        }
+        .providers{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            figure{
+                cursor: pointer;
+                margin: 10px;
+                img{
+                    width: 30px;
+                    &.facebook{
+                        width: 23px;
+                    }
+                }
+            }
+        }
+        .button-register{
+            display: flex;
+            color: #A7A7A7;
+            justify-content: center;
+        }
+        .login-button{
+            display: flex;
+            bottom: 0;
+            position: fixed;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            margin: auto;
+            right: 16px;
+            left: 16px;
+            padding: 14px 0;
+            border: 0;
+            background: #FFE031;
+            border-radius: 10px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+    }
+}
