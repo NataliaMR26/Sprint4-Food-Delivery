@@ -15,7 +15,7 @@ const reducer = {
     orders: orderReducer,
     slide: slideReducer,
     homecards: homecardsReducer,
-    categories: categoryReducer // Agrega el reducer de categorías
+    categories: categoryReducer, // Agrega el reducer de categorías
 
 
 }

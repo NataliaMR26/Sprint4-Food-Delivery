@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getRestaurantActionAsync } from "../../redux/actions/homecardsActions";
-import Rating from '@mui/material/Rating'; // Importa el componente Rating
-import './Homecards.scss'; // Importa el archivo de estilos
+import Rating from '@mui/material/Rating';
+import './Homecards.scss';
 
 const Homecards = () => {
   const dispatch = useDispatch();
@@ -11,6 +11,11 @@ const Homecards = () => {
   useEffect(() => {
     dispatch(getRestaurantActionAsync());
   }, [dispatch]);
+
+  useEffect(() => {
+    // Guardar los restaurantes en el local storage
+    localStorage.setItem("restaurants", JSON.stringify(restaurants));
+  }, [restaurants]);
 
   return (
     <div className="homecards-container">
