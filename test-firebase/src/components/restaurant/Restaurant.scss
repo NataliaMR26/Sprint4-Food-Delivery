@@ -1,0 +1,79 @@
+// src/components/Restaurant.scss
+
+.restaurant {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .category-container {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .category-scroll {
+    display: flex;
+  }
+  
+  .category-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #eee;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .category-button.active {
+    background-color: #ccc;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card:hover {
+    background-color: #eee;
+  }
+  
+  .card-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .card-image {
+    flex: 0 0 30%;
+  }
+  
+  .card-details {
+    flex: 1;
+    padding-left: 20px;
+  }
+  
+  .card h2 {
+    margin-bottom: 5px;
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+  }
+  

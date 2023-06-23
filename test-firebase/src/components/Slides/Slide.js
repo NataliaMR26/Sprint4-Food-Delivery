@@ -28,10 +28,10 @@ const Slide = () => {
             </div>
             {currentSlide === images.length - 1 ? (
                 <Link to="/validation">
-                    <button>Ir a validation</button>
+                    <button className='buttonsito'>Ir a validation</button>
                 </Link>
             ) : (
-                <button onClick={() => dispatch(advanceSlide())}>Siguiente slide</button>
+                <button className='buttonsito' onClick={() => dispatch(advanceSlide())}>Siguiente slide</button>
             )}
         </div>
     );

@@ -1,26 +1,51 @@
 .slide-container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta la altura del contenedor según el tamaño de la pantalla */
 
-  img {
-      width: 100%;
-      height: auto;
-  }
+  /* Si deseas un fondo para el contenedor, agrega el siguiente código */
+  /* background-color: #f5f5f5; */
+}
 
-  .dots {
-      display: flex;
-      justify-content: center;
-      margin: 1em 0;
+.slide-container img {
+  width: 100%;
+  height: auto;
+  max-width: 300px; /* Tamaño máximo para la imagen en dispositivos responsive */
+  display: block;
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
 
-      .dot {
-          width: 10px;
-          height: 10px;
-          margin: 0 5px;
-          border-radius: 50%;
-          background-color: #ccc;
+.slide-container .dots {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+}
 
-          &.active {
-              transform: scale(1.5);
-          }
-      }
-  }
+.slide-container .dots .dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: yellow; /* Cambia el color de los puntos a amarillo */
+}
+
+.slide-container .dots .dot.active {
+  transform: scale(1.5);
+}
+
+.buttonsito {
+  position: absolute; /* Posicionamiento absoluto */
+  bottom: 20px; /* Ajusta la posición vertical del botón */
+  left: 50%; /* Centra el botón horizontalmente */
+  transform: translateX(-50%); /* Centra el botón exactamente en el medio */
+  background-color: yellow; /* Cambia el color del botón a amarillo */
+  color: black; /* Cambia el color del texto del botón a negro */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
 }

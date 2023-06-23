@@ -1,62 +1,29 @@
-import { restaurantTypes } from "../types/restaurantTypes";
-import { getItemsActionAsync, getFilterItemsActionAsync, getItemsByIdActionAsync } from '../../services/crudColection';
+// //USANDO ARCHIVOS LOCALES
 
-export const getRestaurantActionAsync = () => {
-    return async (dispatch) => {
-      try {
-        const restaurants = await getItemsActionAsync("restaurants");
-        dispatch(getRestaurantAction(restaurants));
-      } catch (error) {
-        dispatch(getRestaurantAction([]));
-      }
-    };
-};
+// import MOCK_RESTAURANTS from '../../services/mockData'; 
 
-const getRestaurantAction = (restaurants) => {
-    return {
-      type: restaurantTypes.GET_RESTAURANTS,
-      payload: [...restaurants],
-    };
-};
+// export const GET_RESTAURANTS = 'GET_RESTAURANTS';
+// export const SET_CATEGORY = 'SET_CATEGORY';
+
+// export const getRestaurants = () => {
+//   return {
+//     type: GET_RESTAURANTS,
+//     payload: MOCK_RESTAURANTS
+//   };
+// };
+
+// export const setCategory = (category) => {
+//   return {
+//     type: SET_CATEGORY,
+//     payload: category
+//   };
+// };
+
+// //USANDO ARCHIVOS LOCALES
 
 
-export const getFilterRestaurantActionAsync = (item, filter) => {
-    return async (dispatch) => {
-      try {
-        let restaurants
-        if(item && filter){
-            restaurants = await getFilterItemsActionAsync("restaurants",[filter, '==', item]);
-        } else{
-            restaurants = await getItemsActionAsync("restaurants");
-        }
-        dispatch(getFilterRestaurantAction(restaurants));
-      } catch (error) {
-        dispatch(getFilterRestaurantAction([]));
-      }
-    };
-};
 
-const getFilterRestaurantAction = (restaurants) => {
-    return {
-      type: restaurantTypes.GET_RESTAURANTS,
-      payload: [...restaurants],
-    };
-};
+//USANDO ARCHIVOS FIREBASE NATA
 
-export const getRestaurantByIdActionAsync = (id) => {
-  return async (dispatch) => {
-    try {
-      const restaurants = await getItemsByIdActionAsync("restaurants", id);
-      dispatch(getRestaurantByIdAction(restaurants));
-    } catch (error) {
-      dispatch(getRestaurantByIdAction({}));
-    }
-  };
-}
+//USANDO ARCHIVOS FIREBASE NATA
 
-const getRestaurantByIdAction = (restaurants) => {
-  return {
-    type: restaurantTypes.CURRENT_RESTAURANT,
-    payload: restaurants,
-  };
-};

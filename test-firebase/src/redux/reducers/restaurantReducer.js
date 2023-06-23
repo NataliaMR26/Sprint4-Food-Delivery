@@ -1,31 +1,41 @@
-import { restaurantTypes } from "../types/restaurantTypes";
-const initialState = {
-  restaurants: [],
-  status: "loading",
-  current: {},
-};
+//USANDO ARCHIVOS LOCALES
 
-export const restaurantReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case restaurantTypes.GET_RESTAURANTS:
-      return {
-        ...state,
-        restaurants: [...action.payload],
-      };
+// import { GET_RESTAURANTS, SET_CATEGORY } from '../actions/restaurantActions';
 
-    case restaurantTypes.DELETE_RESTAURANT:
-      return {
-        ...state,
-        restaurants: state.restaurants.filter((restaurant) => restaurant.id !== action.payload.id),
-        status: action.payload.status,
-      };
+// const initialState = {
+//   restaurants: [], // Asegúrate de que la propiedad restaurants se inicialice como un arreglo vacío.
+//   category: ''
+// };
 
-    case restaurantTypes.CURRENT_RESTAURANT:
-      return {
-        ...state,
-        current: action.payload,
-      };
-    default:
-      return state;
-  }
-};
+// const restaurantReducer = (state = initialState, action) => {
+//   switch(action.type) {
+//     case GET_RESTAURANTS:
+//       return {
+//         ...state,
+//         restaurants: action.payload
+//       };
+
+//     case SET_CATEGORY:
+//       return {
+//         ...state,
+//         category: action.payload
+//       };
+
+//     default:
+//       return state;
+//   }
+// };
+
+// export default restaurantReducer;
+
+//USANDO ARCHIVOS LOCALES
+
+
+//USANDO ARCHIVOS FIREBASE NATA
+
+
+//USANDO ARCHIVOS FIREBASE NATA
+
+
+
+
