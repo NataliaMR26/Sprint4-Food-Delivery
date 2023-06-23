@@ -86,7 +86,12 @@ const CategoryComponent = () => {
   };
 
   return (
+    <div>
+      <div>
+        <p>Restaurants and cafes</p>
+      </div>
     <div className="categories">
+
       <button
         className="category"
         onClick={() => filterCategory(null)}
@@ -117,6 +122,7 @@ const CategoryComponent = () => {
       >
         Ice Cream
       </button>
+    </div>
     </div>
   );
 };
