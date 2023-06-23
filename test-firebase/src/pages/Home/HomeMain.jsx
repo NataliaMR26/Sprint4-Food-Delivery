@@ -1,31 +1,20 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import Footer from "../../components/commons/footer/Footer";
+import Coupons from "../../components/coupons/Coupons"
+import Address from '../../components/address/Address';
+import Homecards from '../../components/homecards/Homecards';
+import CategoryComponent from '../../components/categorycomponent/CategoryComponent';
 
 function Home() {
   return (
     <div>
-      <h1>
-       Home se llega desde location
-      
-       2 PAGINAS INCLUYENDO EL MANAGE ADDRESS
-      </h1>
-      
-      <Link to="/ManageAdresses">
-        <button>Ir a Manage Adresses</button>
-      </Link>
 
-      <Link to="/home">
-        <button>Ir a home</button>
-      </Link>
-      <Link to="/search">
-        <button>Ir a Search</button>
-      </Link>
-      <Link to="/Order">
-        <button>Ir a Order</button>
-      </Link>
-      <Link to="/Profile">
-        <button>Ir a Profile</button>
-      </Link>
+      <Address/>
+      <Coupons/>
+      <CategoryComponent/>
+      <Homecards/>
+      <Footer/>
+
 
     </div>
   )

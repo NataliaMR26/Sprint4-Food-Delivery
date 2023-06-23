@@ -1,0 +1,28 @@
+.categories {
+    display: flex;
+    overflow-x: auto;
+  }
+  
+  .category {
+    cursor: pointer;
+    outline: none;
+    background: #F2F2F2;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 80px;
+    height: 33px;
+    font-size: 10px;
+    color: #6C6C6C;
+    padding: 0 10px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+  
+    &:hover,
+    &.selected {
+      background: #FFE031;
+    }
+  }
+  

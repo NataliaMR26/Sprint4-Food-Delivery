@@ -1,0 +1,27 @@
+.Coupons-carousel {
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .Coupons-container {
+    display: inline-flex;
+  }
+  
+  .cupon {
+    background-color: var(--color-secondary);
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 259px;
+    height: 96px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
