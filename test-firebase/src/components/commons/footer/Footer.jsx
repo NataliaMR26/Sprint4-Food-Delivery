@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer">
         <figure>
             <NavLink
-            to="/"
+            to="/home"
             className={({ isActive }) =>
                 isActive ? "selected link-footer home" : "link-footer home"
             }
