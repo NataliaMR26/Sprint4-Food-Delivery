@@ -3,10 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { getRestaurantActionAsync } from "../../redux/actions/homecardsActions";
 import Rating from '@mui/material/Rating'; // Importa el componente Rating
 import './Homecards.scss'; // Importa el archivo de estilos
+import { useNavigate } from "react-router-dom";
 
 const Homecards = () => {
   const dispatch = useDispatch();
   const { restaurants } = useSelector((state) => state.homecards);
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(getRestaurantActionAsync());
@@ -15,6 +17,7 @@ const Homecards = () => {
   return (
     <div className="homecards-container">
       {restaurants.map((restaurant) => (
+      <button onClick={()=> navigate(`/restaurant/${restaurant.id}`)}>
         <div className="card-restaurant" key={restaurant.id}>
           <figure>
             <img src={restaurant.photo} alt="Restaurant" />
@@ -28,6 +31,7 @@ const Homecards = () => {
             </div>
           </div>
         </div>
+     </button>
       ))}
     </div>
   );
