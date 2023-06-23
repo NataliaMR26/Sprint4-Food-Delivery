@@ -6,6 +6,7 @@ import { orderReducer } from "../reducers/orderReducer";
 import { slideReducer } from "../reducers/slideReducer";
 // import MOCK_RESTAURANTS from "../../services/mockData"; modo local de emergencia
 import homecardsReducer from "../reducers/homecardsReducer";
+import { categoryReducer } from "../reducers/categoryRecuder";
 
 const reducer = {
     login: loginReducer,
@@ -13,7 +14,9 @@ const reducer = {
     plates: plateReducer,
     orders: orderReducer,
     slide: slideReducer,
-    homecards: homecardsReducer
+    homecards: homecardsReducer,
+    categories: categoryReducer // Agrega el reducer de categorías
+
 
 }
 
