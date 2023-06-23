@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "./SearchPage.scss"; // Importa el archivo de estilos personalizado
 
 const SearchPage = () => {
   const [restaurants, setRestaurants] = useState([]);
@@ -29,22 +30,22 @@ const SearchPage = () => {
   );
 
   return (
-    <div>
+    <div className="search-page">
       <input
         type="text"
         placeholder="Buscar restaurantes..."
         onChange={handleSearch}
       />
-      <div>
+      <div className="restaurant-list">
         {searched ? (
           filteredRestaurants.length > 0 ? (
             filteredRestaurants.map((restaurant) => (
               <div
                 key={restaurant.id}
+                className="restaurant-card"
                 onClick={() => handleRestaurantClick(restaurant.id)}
               >
                 <h3>{restaurant.name}</h3>
-                <p>{restaurant.description}</p>
               </div>
             ))
           ) : (

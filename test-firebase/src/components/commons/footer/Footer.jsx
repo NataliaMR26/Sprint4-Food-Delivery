@@ -25,7 +25,7 @@ const Footer = () => {
         </figure>
         <figure>
             <NavLink
-            to="/orders"
+            to="/order"
             className={({ isActive }) =>
                 isActive ? "selected link-footer order" : "link-footer order"
             }

@@ -93,19 +93,19 @@ const Plate = () => {
       }
     });
 
-   // Guardar detalles del plato en el carrito del localStorage
-   const cart = JSON.parse(localStorage.getItem("cart")) || [];
-   const plateDetails = {
-     id: order.product.length,
-     name: current.name,
-     cant: currentAmount,
-     price: "$ " + total / currentAmount,
-     totalOrder: "$ " + total,
-     photo: current.photo,
-   };
-   cart.push(plateDetails);
-   localStorage.setItem("cart", JSON.stringify(cart));
- };
+    // Guardar detalles del plato en el carrito del localStorage
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const plateDetails = {
+      id: order.product.length,
+      name: current.name,
+      cant: currentAmount,
+      price: "$ " + total / currentAmount,
+      totalOrder: "$ " + total,
+      photo: current.photo,
+    };
+    cart.push(plateDetails);
+    localStorage.setItem("cart", JSON.stringify(cart));
+  };
 
   return (
     <section className="plate-page">

@@ -22,21 +22,21 @@ const Homecards = () => {
   return (
     <div className="homecards-container">
       {restaurants.map((restaurant) => (
-      <button onClick={()=> navigate(`/restaurant/${restaurant.id}`)}>
+      <div onClick={()=> navigate(`/restaurant/${restaurant.id}`)}>
         <div className="card-restaurant" key={restaurant.id}>
           <figure>
             <img src={restaurant.photo} alt="Restaurant" />
           </figure>
           <div className="information">
             <h2 className="title">{restaurant.name}</h2>
-            <p className="description">{restaurant.description}</p>
+            <p className="description">{restaurant.workTime}</p>
             <div className="rating">
               <Rating size="small" value={restaurant.stars} readOnly />
               <span className="duration">{restaurant.time}</span>
             </div>
           </div>
         </div>
-     </button>
+     </div>
       ))}
     </div>
   );

@@ -1,0 +1,21 @@
+.address {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .address-icon {
+    margin-right: 10px;
+    color: #FF9800; /* Color del ícono */
+  }
+  
+  .address-text {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .address-text p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
